@@ -1,0 +1,211 @@
+.journal-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.journal-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.journal-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.journal-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.journal-form {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.journal-input-section label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.journal-textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.8;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s;
+  margin-bottom: 1.5rem;
+}
+
+.journal-textarea:focus {
+  border-color: #667eea;
+}
+
+.journal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.save-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.cancel-button:hover {
+  background: #e0e0e0;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s;
+}
+
+.new-entry-button {
+  width: 100%;
+  padding: 1.5rem;
+  background: white;
+  border: 2px dashed #667eea;
+  border-radius: 15px;
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.new-entry-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #764ba2;
+  transform: translateY(-2px);
+}
+
+.journal-entries {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.journal-entries h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.journal-entry {
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+
+.journal-entry:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.entry-header {
+  margin-bottom: 1rem;
+}
+
+.entry-date {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.entry-content {
+  color: #333;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.entry-content p {
+  margin-bottom: 1rem;
+}
+
+.entry-content p:last-child {
+  margin-bottom: 0;
+}
+
+.empty-state {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .journal-actions {
+    flex-direction: column;
+  }
+
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+}
+
